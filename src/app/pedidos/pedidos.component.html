@@ -1,0 +1,28 @@
+<button (click)="goToHome()" class="btn btn-primary">Salir</button>
+<button (click)="goToProductos()" class="btn btn-primary">Productos</button>
+<div class="pedido-management-container">
+    <h2>Gestión de Pedidos</h2>
+  
+    <!-- Formulario para añadir un nuevo pedido -->
+    <form (submit)="onSubmit()" class="pedido-form">
+      <div class="form-group">
+        <label for="cliente">Cliente:</label>
+        <input type="text" id="cliente" [(ngModel)]="newPedido.cliente" name="cliente" required>
+      </div>
+      <div class="form-group">
+        <label for="producto">Producto:</label>
+        <input type="text" id="producto" [(ngModel)]="newPedido.producto" name="producto" required>
+      </div>
+      <div class="form-group">
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" [(ngModel)]="newPedido.cantidad" name="cantidad" required>
+      </div>
+      <button type="submit" class="btn">Añadir Pedido</button>
+    </form>
+  
+    <!-- Lista de pedidos -->
+    <ul class="pedido-list">
+      <!-- Aquí se mostrarán los pedidos -->
+    </ul>
+  </div>
+  

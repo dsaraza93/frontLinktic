@@ -1,0 +1,79 @@
+/* Estilos para el contenedor del formulario de pedidos */
+.pedido-management-container {
+    width: 80%; /* Ajusta el ancho según tus necesidades */
+    margin: 50px auto 0; /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilos para el formulario de pedidos */
+  .pedido-form {
+    margin-bottom: 20px; /* Espacio entre el formulario y la lista de pedidos */
+  }
+  
+  .pedido-form .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .pedido-form label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .pedido-form input[type="text"],
+  .pedido-form input[type="number"] {
+    width: calc(100% - 20px); /* Reducir el ancho y dejar un espacio para el padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .pedido-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .pedido-form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para la lista de pedidos */
+  .pedido-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .pedido-list .pedido-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .pedido-list .pedido-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .pedido-list .pedido-item p {
+    margin: 0;
+  }
+  .btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }

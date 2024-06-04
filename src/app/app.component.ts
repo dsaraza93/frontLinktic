@@ -1,4 +1,6 @@
+// app.component.ts
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router'; // Importa el Router
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frontLinktic';
+  constructor(private router: Router) {}
+
+  isLoginPage(): boolean {
+    return this.router.url === '/login';
+  }
 }

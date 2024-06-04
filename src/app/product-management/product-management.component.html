@@ -1,0 +1,35 @@
+<button (click)="goToHome()" class="btn btn-primary">Salir</button>
+<button (click)="goToPedidos()" class="btn btn-primary">Ir a Pedidos</button>
+
+<div class="product-management-container">
+  <h2>Gestión de Productos</h2>
+
+  <!-- Formulario para añadir un nuevo producto -->
+  <form (submit)="onSubmit()" class="product-form">
+    <div class="form-group">
+      <label for="name">Nombre del producto:</label>
+      <input type="text" id="name" [(ngModel)]="newProduct.name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Descripción:</label>
+      <textarea id="description" [(ngModel)]="newProduct.description" name="description" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="price">Precio:</label>
+      <input type="number" id="price" [(ngModel)]="newProduct.price" name="price" required>
+    </div>
+    <button type="submit" class="btn">Añadir Producto</button>
+  </form>
+
+  <!-- Lista de productos -->
+  <ul class="product-list">
+    <li *ngFor="let product of products" class="product-item">
+      <h3>{{ product.name }}</h3>
+      <p>ID: {{ product.id }}</p>
+      <p>{{ product.description }}</p>
+      <p>Precio: {{ product.price }}</p>
+      <button *ngIf="product.id" (click)="deleteProduct(product.id)" class="btn btn-danger">Eliminar</button>
+    </li>
+  </ul>
+</div>
+
